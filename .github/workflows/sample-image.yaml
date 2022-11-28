@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    # output from main.tf
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
@@ -22,4 +24,5 @@ jobs:
       uses: 'google-github-actions/deploy-cloudrun@v0'
       with:
         image: 'gcr.io/cloudrun/hello'
-        service: 'hello-cloud-run'
+        region: australia-southeast-2
+        service: 'gday-cloud-run'
