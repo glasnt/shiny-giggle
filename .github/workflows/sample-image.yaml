@@ -23,6 +23,6 @@ jobs:
     - name: 'Deploy to Cloud Run'
       uses: 'google-github-actions/deploy-cloudrun@v0'
       with:
-        image: 'gcr.io/cloudrun/hello'
+        source: '.'
         region: australia-southeast2
         service: 'gday-cloud-run'
