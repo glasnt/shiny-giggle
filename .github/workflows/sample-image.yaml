@@ -15,7 +15,7 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
-        workload_identity_provider: 'projects/1067740512006/locations/global/workloadIdentityPools/example-pool'
+        workload_identity_provider: 'projects/1067740512006/locations/global/workloadIdentityPools/example-pool/providers/example-gh-provider'
         service_account: 'my-service-account@glasnt-githubactions-4821.iam.gserviceaccount.com'
 
     - name: 'Deploy to Cloud Run'
